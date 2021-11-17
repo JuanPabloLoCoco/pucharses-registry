@@ -1,0 +1,25 @@
+### Happy Path. Should return 200 and message
+POST http://localhost:5001/pucharses
+Content-Type: application/json
+
+{
+  "combos": [{ "id": "8ebf814d-ec2a-46ef-b716-b8ef23c22513", "quantity": 1}]
+}
+
+
+### Invalid Path. Should return 400 and quantity is not number
+POST http://localhost:5001/pucharses
+Content-Type: application/json
+
+{
+  "combos": [{ "id": "8ebf814d-ec2a-46ef-b716-b8ef23c22513", "quantity": "3"}]
+}
+
+
+### Invalid Path. Should return 400 and quantity is not number
+POST http://localhost:5001/pucharses
+Content-Type: application/json
+
+{
+  "combos": [{ "id": "8ebf814d-ec2a-46ef-b716-b8ef23c22512", "quantity": "3"}]
+}

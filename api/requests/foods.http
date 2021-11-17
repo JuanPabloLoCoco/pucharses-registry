@@ -1,0 +1,25 @@
+GET http://localhost:5001/foods
+
+###
+
+POST http://localhost:5001/foods
+Content-Type: application/json
+
+{
+  "label": "hambuguesa"
+}
+
+### Get food by Id
+GET http://localhost:5001/foods/815c979b-ea65-4d00-abdb-614529ccb5e2
+
+
+### Edit food
+PUT http://localhost:5001/foods/7af0bcfb-2fc4-46fe-bc8a-14e4c9452f07
+Content-Type: application/json
+
+{
+  "label": "Fernet"
+}
+
+### Remove food
+DELETE http://localhost:5001/foods/815c979b-ea65-4d00-abdb-614529ccb5e2

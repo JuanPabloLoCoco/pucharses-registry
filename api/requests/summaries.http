@@ -1,0 +1,2 @@
+### Get Summary
+GET http://localhost:5001/summary

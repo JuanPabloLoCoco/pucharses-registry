@@ -1,0 +1,35 @@
+POST http://localhost:5001/combos
+Content-Type: application/json
+
+{
+  "label": "combo 1",
+  "price": 40,
+  "foods": [{ "id": "815c979b-ea65-4d00-abdb-614529ccb5e2", "quantity": 12}]
+}
+
+
+### New Combo
+POST http://localhost:5001/combos
+Content-Type: application/json
+
+{
+  "label": "combo 2",
+  "price": 100,
+  "foods": [{ "id": "c0369fab-7589-4245-9e15-a26538af67c7", "quantity": 1}, {
+    "id": "1e7f07fe-b87e-41c4-88fd-018bfa84ea6d", "quantity": 1}]
+}
+
+
+### Edit combo
+PUT http://localhost:5001/combos/df151a82-28c0-4f60-87d6-a520c8a070a0
+Content-Type: application/json
+
+{
+  "label": "combo 2",
+  "price": 100,
+  "foods": [{ "id": "c0369fab-7589-4245-9e15-a26538af67c7", "quantity": 1}]
+}
+
+
+### GET Combos list
+GET http://localhost:5001/combos
