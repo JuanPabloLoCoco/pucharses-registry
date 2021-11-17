@@ -1,0 +1,9 @@
+.Container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.Text-padding {
+  padding-right: 2em;
+}
