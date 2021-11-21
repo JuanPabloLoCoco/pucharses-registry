@@ -71,7 +71,7 @@ const ComboForm: React.FC<ComboFormProps> = (props: ComboFormProps) => {
 
   useEffect(() => {
     setState(setInitialState());
-  }, [props.value, setInitialState]);
+  }, [props.value]);
 
   const handleComboCreation = () => {
     if (props.onCreate) {

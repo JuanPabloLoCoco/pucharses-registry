@@ -52,6 +52,11 @@ function App() {
 
   const tabs: TabComponent[] = [
     {
+      label: "Compras",
+      disabled: false,
+      component: <PucharsesPage />,
+    },
+    {
       label: "Combos",
       disabled: false,
       component: <CombosPage />,
@@ -61,11 +66,7 @@ function App() {
       disabled: false,
       component: <FoodPage />,
     },
-    {
-      label: "Compras",
-      disabled: false,
-      component: <PucharsesPage />,
-    },
+
     {
       label: "Contaduria",
       disabled: false,

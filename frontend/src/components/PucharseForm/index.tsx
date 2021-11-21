@@ -1,4 +1,10 @@
-import { Box, Button, CircularProgress, Stack } from "@mui/material";
+import {
+  Box,
+  Button,
+  CircularProgress,
+  Stack,
+  Typography,
+} from "@mui/material";
 import React, { useState } from "react";
 import { Combo } from "../../services/apiService";
 import ComboCounter from "../ComboCounter";
@@ -53,6 +59,11 @@ const PucharseForm: React.FC<PucharseFormProps> = (
     setState({ ...state, combos: newArr.filter((c) => c.quantity > 0) });
   };
 
+  const totalPrice = state.combos.reduce((acc, curr) => {
+    let comboFound = props.combos.filter((c) => c.id === curr.id);
+    return acc + comboFound[0].price * curr.quantity;
+  }, 0);
+
   return (
     <>
       <Box
@@ -80,6 +91,9 @@ const PucharseForm: React.FC<PucharseFormProps> = (
             );
           })}
         </Box>
+        <div>
+          <Typography variant="h5">Total $ {totalPrice}</Typography>
+        </div>
         <div>
           <Stack
             direction="row"

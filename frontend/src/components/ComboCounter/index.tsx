@@ -32,7 +32,9 @@ const ComboCounter: React.FC<ComboCounterProps> = (
       alignItems={"center"}
       justifyContent={"space-between"}
     >
-      <Typography>{props.combo.label}</Typography>
+      <Typography>
+        {props.combo.label + " ($" + props.combo.price + ")"}
+      </Typography>
       <Stack
         direction="row"
         spacing={1}

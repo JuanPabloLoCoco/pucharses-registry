@@ -152,7 +152,10 @@ export const api = createApi({
           body,
         };
       },
-      invalidatesTags: (result, error) => [{ type: "pucharses", id: "List" }],
+      invalidatesTags: (result, error) => [
+        { type: "pucharses", id: "List" },
+        { type: "summary", id: "List" },
+      ],
     }),
   }),
 });
